@@ -41,7 +41,9 @@
                 </tr>
                 @endforeach
             </table>
-  
+            <div class="pagination">
+                {{ $users->onEachSide(1)->links() }}
+            </div>
         </div>
     </div>
 </div>
