@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
   
+use App\Http\Controllers\PdfController;
 use App\Http\Controllers\UserController;
 
 /*
@@ -25,3 +26,5 @@ Route::controller(UserController::class)->group(function(){
     Route::get('users-export', 'export')->name('users.export');
     Route::post('users-import', 'import')->name('users.import');
 });
+
+Route::get('/pdf-doc', [PdfController::class, 'document']);
